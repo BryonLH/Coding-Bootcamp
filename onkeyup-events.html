@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id ="key"></div>
+
+
+    <script>
+        var string = ["noon", "horse", "racecaer"];
+
+        //console.log(string.reverse());
+
+        //for (var i = 0; i < string.length; i++) {
+        //    console.log()
+        //}
+
+        
+       // var elem = document.getElementById("key");
+       // console.log(elem);
+      //  document.onkeyup = function(event) {
+        //    console.log(event.key);
+       //     elem.textContent = event.key;
+        //}
+
+
+       // var elem = document.getElementById("key");
+       // console.log(elem);
+       // document.onkeyup = function(event) {
+       //     console.log(event.key);
+         //   elem.innerHTML = "<h1>" + event.key + "</h1>";
+        //}
+
+        var elem = document.getElementById("key");
+        console.log(elem);
+        var theOneToGuess = "x";
+        document.onkeyup = function(event) {
+            if(event.key === theOneToGuess) {
+                elem.textContent = "winner";
+                else {
+                    elem.textContent = "fail";
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>
