@@ -1,0 +1,38 @@
+p {
+    width: 80%;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+.contaner {
+    padding:50ps;
+
+}
+
+#fixed {
+    position:fixed;
+    padding:25px;
+    width:60px;
+    text-align:center;
+    top:0;
+    left:0;
+    background-color:lightblue;
+}
+
+#relative {
+    position:relative;
+    padding:25px;
+    height:200px;
+    text-align:center;
+    background-color:lightgrey;
+}
+
+#absolute {
+    position:absolute;
+    background-color:grey;
+    padding:30px;
+    width:60px;
+    text-align:center;
+    bottom:0px;
+    right:-20px;
+}

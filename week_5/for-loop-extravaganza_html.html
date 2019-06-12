@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getAllIndexes(arr, val) {
+            var indexes = [], i = -1;
+            while ((i = arr.indexOf(val, i + 1)) != -1) {
+                indexes.push(i);
+            }
+            return indexes;
+        }
+        var name = 'sammy';
+        var nameArr = name.split('');
+        var underArr = ['_', '_', '_', '_', '_']
+        
+        // traditional
+        for (var i = 0; i < nameArr.length; i++) {
+            console.log(nameArr[i])
+        }
+        console.log('============')
+        // // functional
+        nameArr.forEach(function (char) {
+            console.log(char)
+        })
+        console.log('============')
+        // for in
+        for (var index in nameArr) {
+           console.log(nameArr[index]) 
+        }
+        console.log('============')
+        // for of
+        for (var item of nameArr) {
+            console.log(item)
+        }
+    </script>
+</body>
+
+</html>
