@@ -34,10 +34,10 @@ function nextImage() {
   $("#image-holder").html($("<img>").attr("src", "./images/loading.gif"));
 
   // TODO: Use a setTimeout to run displayImage after 1 second.
-  setTimeout(displayImage, 100);
+  setTimeout(displayImage, 1000);
 
   // TODO: If the count is the same as the length of the image array, reset the count to 0.
-  if (count === images.length - 1) {
+  if (count === images.length) {
     count = 0;
   }
 
@@ -45,7 +45,7 @@ function nextImage() {
 function startSlideshow() {
 
   // TODO: Use showImage to hold the setInterval to run nextImage.
-    setInterval(showImage, 1000);
+    showImage = setInterval(nextImage, 10000);
   
 }
 
