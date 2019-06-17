@@ -60,8 +60,9 @@
           var number = Math.floor(Math.random() * 100) + 1;
           if ($.inArray(number, lottoNumbers) == -1) {
             lottoNumbers.push(number);
-            console.log (number);
+            console.log(number);
             $("#random-number").text(lottoNumbers);
+            console.log(lottoNumbers);
           }
         }
       })
