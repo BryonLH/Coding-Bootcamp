@@ -45,7 +45,7 @@ function nextImage() {
 function startSlideshow() {
 
   // TODO: Use showImage to hold the setInterval to run nextImage.
-    showImage = setInterval(nextImage, 10000);
+    showImage = setInterval(nextImage, 5000);
   
 }
 

@@ -1,7 +1,7 @@
 //  Interval Exercise (follow the instructions below).
 
 //  This code will run as soon as the page loads.
-window.onload = function() {
+window.onload = function () {
   $("#lap").on("click", recordLap);
   $("#stop").on("click", stop);
   $("#reset").on("click", reset);
@@ -22,7 +22,7 @@ function reset() {
   lap = 1;
 
   //  TODO: Change the "display" div to "00:00."
-$("#display").text("00:00");
+  $("#display").text("00:00");
 }
 
 function start() {
@@ -31,11 +31,12 @@ function start() {
   if (!clockRunning) {
     clockRunning = true;
     intervalId = setInterval(count, 1000);
+  }
 }
 
 function stop() {
-  clockRunning = false;
   //  TODO: Use clearInterval to stop the count here and set the clock to not be running.
+  clockRunning = false;
   clearInterval(intervalId);
 }
 
@@ -43,21 +44,22 @@ function recordLap() {
 
   //  TODO: Get the current time, pass that into the timeConverter function,
   //        and save the result in a variable.
-  
+  var currentTimeDisplay = timeConverter(time);
   //  TODO: Add the current lap and time to the "laps" div.
-  
+  $("#laps").append("<div>Lap # " + lap + " : " + currentTimeDisplay + "</div>");
 
   //  TODO: Increment lap by 1. Remember, we can't use "this" here.
+  lap++;
 }
 function count() {
 
   //  TODO: increment time by 1, remember we cant use "this" here.
-    time++;
+  time++;
   //  TODO: Get the current time, pass that into the timeConverter function,
   //        and save the result in a variable.
-    var currentTimeDisplay = timeConverter(time);
+  var currentTimeDisplay = timeConverter(time);
   //  TODO: Use the variable you just created to show the converted time in the "display" div.
-    $("#display").text(currentTimeDisplay);
+  $("#display").text(currentTimeDisplay);
 }
 
 //  THIS FUNCTION IS DONE FOR US!
@@ -83,4 +85,3 @@ function timeConverter(t) {
 
   return minutes + ":" + seconds;
 }
-
