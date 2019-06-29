@@ -83,7 +83,8 @@
     <script src="https://code.jquery.com/jquery.js"></script>
 
     <!-- LINK TO FIREBASE GOES HERE -->
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-database.js"></script>
 
     <!-- Script -->
     <script>
@@ -115,12 +116,7 @@
         // YOUR TASK!!!
 
         // Code in the logic for storing and retrieving the most recent user.
-        database.ref().on("value", function (snapshot) {
-        name = snapshot.val().name;
-        email = snapshot.val().email;
-        age = snapshot.val().age;
-        comment = snapshot.val().comment;
-        console.log(snapshot.val());
+       
 
         // $("#add-user").text(snapshot.val().name);
 
