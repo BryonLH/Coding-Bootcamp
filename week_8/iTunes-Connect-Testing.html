@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+<body>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js" integrity="sha256-XmdRbTre/3RulhYk/cOBUMpYlaAp2Rpo/s556u0OIKk=" crossorigin="anonymous"></script>
+   <script type="text/javascript">
+
+
+       axios({
+           url: "https://itunes.apple.com/search?term=jack+johnson&limit=25",
+           method:"GET",
+       })
+      .then(function(response){
+       console.log(response)
+      })
+      .catch(function (err) {
+                   console.error(err)
+               })
+
+
+       </script>
+</body>
+</html>
